@@ -5,20 +5,22 @@ var messageError = document.getElementById('message-error');
 var submitError = document.getElementById('submit-error');
 
 function validateName(){
-  var name = document.getElementById('contact-name').value;
+  let name = document.getElementById("contact-name").value;
 
-  if(name.length == 0){
-    nameError.innerHTML = 'Name is required';
-    return false;
+  if (name.length == 0) {
+      nameError.innerHTML = "Name is required";
+      return false;
   }
-
   if(!name.match(/^([a-zA-Z ]){2,30}$/)){
-    nameError.innerHTML = 'Write name';
-    return false;
+      nameError.innerHTML = "Use only Aplhabets";
+      return false;
   }
-  nameError.innerHTML='<i class="bi bi-check-circle-fill"></i>';
-  return true;
+      nameError.innerHTML = '<i class="bi bi-check-circle-fill"></i>'
+      return true
+  
 }
+
+
 function validateEmail(){
   var email = document.getElementById('contact-email').value;
   if(email.length == 0){
